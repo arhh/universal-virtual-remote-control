@@ -47,7 +47,7 @@ _Note: "receiving device" below refers to the set-top box, TV, etc. That the vir
 8. You should now be able to start up both IDEs and open the downloaded files for this project without problems.
 
 ## Arduino Circuit Diagram:
-![IR Receiver Diagram](https://github.com/arhh/arduino-remote-transmitter/blob/master/diagrams/circuit_diagram.png)
+![IR Receiver Diagram](https://github.com/arhh/universal-virtual-remote-control/blob/master/diagrams/circuit_diagram.png)
 
 ## Usage:
 ### Discovering the Type of IR Signals your Receiving Device Recognises:
