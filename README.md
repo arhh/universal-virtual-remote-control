@@ -47,6 +47,7 @@ _Note: "receiving device" below refers to the set-top box, TV, etc. That the vir
 8. You should now be able to start up both IDEs and open the downloaded files for this project without problems.
 
 ## Arduino Circuit Diagram:
+**Note**: Pin 2 is now used for receiver.
 ![IR Receiver Diagram](https://github.com/arhh/universal-virtual-remote-control/blob/master/diagrams/circuit_diagram.png)
 
 ## Usage:
