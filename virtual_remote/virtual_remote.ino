@@ -1,16 +1,21 @@
-#include <IRremote.h>
-
 // Length of command code (in bits) to transmit
 #define COMMAND_LENGTH 32
 
 // Cool-off period (in milliseconds) after transmission
-#define IR_LED_COOLDOWN 40
+#define DELAY_AFTER_SEND 1000
 
 // Number of times a command should be transmitted
 #define PULSE_COUNT 1
 
+// Arduino IO pin to which IR LED is connected
+#define IR_SEND_PIN 3
+
+#define REPEAT_TRANSMISSIONS 1
+
+#include <IRremote.hpp>
+
 // Declare variable for IR transmitter
-IRsend irsend;
+//IRsend irsend;/
 
 /**
  * Disable built-in LED and prepare serial port.
@@ -19,6 +24,7 @@ void setup() {
     pinMode(LED_BUILTIN, OUTPUT);
     digitalWrite(LED_BUILTIN, 0);
     Serial.begin(9600);
+    IrSender.begin(IR_SEND_PIN, ENABLE_LED_FEEDBACK);
 }
 
 /**
@@ -44,8 +50,8 @@ void sendCommand(int hexCode) {
     for (int i = 0; i < PULSE_COUNT; i++) {
         // sendNEC should be replaced by the appropriate command depending on
         // what the receiving device understands. See README for more info.
-        irsend.sendNEC(hexCode, COMMAND_LENGTH);
-        delay(IR_LED_COOLDOWN);
+        IrSender.sendLG(hexCode, COMMAND_LENGTH, REPEAT_TRANSMISSIONS);
+        delay(DELAY_AFTER_SEND);
     }
 }
 
