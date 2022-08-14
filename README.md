@@ -40,11 +40,8 @@ _Note: "receiving device" below refers to the set-top box, TV, etc. That the vir
 ## Installation (assuming Processing IDE and Arduino IDE are already installed):
 1. Download a ZIP file of the repository.
 2. Extract the contents of the ZIP to some folder on your computer.
-3. Place the "discover_device_command.pde" file in a folder named "discover_device_command" so that it can be opened by the Processing IDE (typically you would put it into the "Processing" folder - which is automatically created when Processing is installed).
-4. Place the "virtual_remote.pde" file in a folder named "virtual_remote" and place it into the Processing directory also.
-5. Place the "virtual_remote.ino" file into a folder named "virtual_remote". This folder can be placed in your "Arduino" folder - which is automatically created when the Arduino IDE is installed.
-6. See the following site for instructions on installing/configuring the IRremote library:  [Arduino IRremote](https://z3t0.github.io/Arduino-IRremote/).
-8. You should now be able to start up both IDEs and open the downloaded files for this project without problems.
+3. See the following site for instructions on installing/configuring the IRremote library:  [Arduino IRremote](https://z3t0.github.io/Arduino-IRremote/).
+4. You should now be able to start up both IDEs and open the downloaded files for this project without problems.
 
 ## Arduino Circuit Diagram:
 **Note**: Pin 2 is now used for receiver.
